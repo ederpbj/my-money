@@ -1,12 +1,13 @@
 {
   "name": "my-money",
   "version": "1.0.0",
-  "description": "Investments dashboard app",
+  "description": "Projeto front em React, backend em graphql, com api rest",
   "main": "index.js",
   "scripts": {
     "start": "node src/index",
-    "prettier": "prettier --write \"./{src,client/src}/**/*.{js,scss}\"",
-    "lint": "eslint --fix \"./{src,client/src}/**/*.js\""
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix \"./{src,client/src}/**/*.js\"",
+    "prettier": "prettier --write\"./{src,client/src}/**/*.{js,scss}\""
   },
   "repository": {
     "type": "git",
@@ -14,21 +15,18 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ederpbj/my-money/issues"
   },
   "homepage": "https://github.com/ederpbj/my-money#readme",
-  "engines": {
-    "node": "9.x.x"
-  },
   "devDependencies": {
-    "eslint": "^4.18.2",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-node": "^6.0.1",
-    "prettier": "^1.11.1"
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-node": "^11.0.0",
+    "prettier": "^1.19.1"
   },
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.17.1"
   }
 }
