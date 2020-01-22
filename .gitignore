@@ -1,3 +1,6 @@
+#Meus
+config/secret.js
+
 # Logs
 logs
 *.log
