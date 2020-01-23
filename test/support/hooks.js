@@ -5,8 +5,8 @@ const { sequelize } = require('../../src/models');
   antes de cada teste   
   usamos sync para limpar as tabelas  
 */  
-beforeEach(async () => {  
-  await sequelize.sync({ force: true });  
+beforeEach(async () => {
+  await sequelize.sync({ force: true });
 });
 
 /*   
