@@ -1,5 +1,7 @@
 #Meus
 config/secret.js
+.nyc_output  
+coverage
 
 # Logs
 logs
