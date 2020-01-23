@@ -1,6 +1,8 @@
 #Meus
+.vscode
+.nyc_output
+node_modules
 config/secret.js
-.nyc_output  
 coverage
 
 # Logs

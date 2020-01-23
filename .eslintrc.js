@@ -6,8 +6,7 @@ module.exports = {
   env: {
     node: true
   },
-  rules: {  
+  rules: {
     'node/no-unpublished-require': 'off'
   }
 };
-
