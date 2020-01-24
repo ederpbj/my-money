@@ -1,17 +1,13 @@
 const { collection } = require('forest-express-sequelize');
+//import { collection } from 'forest-express-sequelize'
+
 collection('Investments', {
   actions: [],
-  fields: [
-    {  
-      field: 'fullName',  
-      type: 'String',  
-      get(object) {  
-        return `${object.name} (${object.Broker.name})`;  
-      }  
-    } 
-  ],
+  fields: [],
   segments: [],
 });
+
+
 
 //Original:
 // This file allows you to add to your Forest UI:
