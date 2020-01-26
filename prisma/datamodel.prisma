@@ -1,0 +1,39 @@
+type BalanceUpdate @db(name: "BalanceUpdates") {
+  id: Int! @id(strategy: SEQUENCE) @sequence(name: "BalanceUpdates_id_seq", initialValue: 1, allocationSize: 1)
+  amount: Float!
+  createdAt: DateTime! @createdAt
+  date: DateTime!
+  investmentId: Investment! @db(name: "InvestmentId")
+  updatedAt: DateTime! @updatedAt
+}
+
+type Broker @db(name: "Brokers") {
+  id: Int! @id(strategy: SEQUENCE) @sequence(name: "Brokers_id_seq", initialValue: 1, allocationSize: 1)
+  createdAt: DateTime! @createdAt
+  investments: [Investment]
+  name: String!
+  updatedAt: DateTime! @updatedAt
+}
+
+type Investment @db(name: "Investments") {
+  id: Int! @id(strategy: SEQUENCE) @sequence(name: "Investments_id_seq", initialValue: 1, allocationSize: 1)
+  balanceUpdates: [BalanceUpdate]
+  brokerId: Broker! @db(name: "BrokerId")
+  createdAt: DateTime! @createdAt
+  name: String!
+  transactions: [Transaction]
+  updatedAt: DateTime! @updatedAt
+}
+
+type SequelizeMeta {
+  name: ID! @id
+}
+
+type Transaction @db(name: "Transactions") {
+  id: Int! @id(strategy: SEQUENCE) @sequence(name: "Transactions_id_seq", initialValue: 1, allocationSize: 1)
+  amount: Float!
+  createdAt: DateTime! @createdAt
+  date: DateTime!
+  investmentId: Investment! @db(name: "InvestmentId")
+  updatedAt: DateTime! @updatedAt
+}

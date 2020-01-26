@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index",
-    "test": "cross-env NODE_ENV=test mocha --recursive",
-    "test:coverage": "nyc --reporter=html --reporter=text npm run test",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:coverage": "npm run test -- --coverage",
     "prettier": "prettier \"./{src,client/src}/**/*.{js,scss}\"",
     "prettier:check": "npm run prettier -- -l",
     "prettier:write": "npm run prettier -- --write",
@@ -28,27 +28,24 @@
     "node": "9.x.x"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-as-promised": "^7.1.1",
+    "babel-eslint": "^8.2.2",
     "cross-env": "^5.1.4",
-    "eslint": "^4.19.0",
+    "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-node": "^6.0.1",
-    "mocha": "^5.0.4",
-    "nyc": "^15.0.0",
+    "jest": "^22.4.3",
     "prettier": "^1.11.1",
-    "sequelize-cli": "^5.5.1"
+    "sequelize-cli": "^4.0.0"
   },
   "dependencies": {
-    "apollo-server": "^2.9.16",
-    "apollo-server-express": "^2.9.16",
-    "express": "^4.16.3",
-    "forest-express-sequelize": "^5.7.0",
-    "graphql": "^14.5.8",
-    "graphql-import": "^0.7.1",
-    "graphql-tools": "^4.0.6",
+    "apollo-server-express": "^1.3.4",
+    "express": "^4.16.2",
+    "forest-express-sequelize": "^2.7.0",
+    "graphql": "^0.13.2",
+    "graphql-import": "^0.5.0",
+    "graphql-tools": "^2.23.1",
     "pg": "^7.4.1",
-    "sequelize": "^5.21.3"
+    "sequelize": "^4.37.5"
   },
   "nyc": {
     "exclude": [

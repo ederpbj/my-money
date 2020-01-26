@@ -1,7 +1,7 @@
 const { graphqlExpress, graphiqlExpress } = require('apollo-server-express');
 const { makeExecutableSchema } = require('graphql-tools');
 const { importSchema } = require('graphql-import');
-const resolvers = require('./back-graph/resolvers');
+const resolvers = require('./graphql/resolvers');
 
 const setup = app => {
   const schema = makeExecutableSchema({

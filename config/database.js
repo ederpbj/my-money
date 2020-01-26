@@ -1,4 +1,5 @@
 const secret = require('./secret');
+const Sequelize = require('sequelize');
 
 module.exports = {
   development: {
@@ -6,7 +7,8 @@ module.exports = {
     password: secret.DATABASE_PASSWORD,
     database: 'mymoney',
     host: '127.0.0.1',
-    dialect: 'postgres'
+    dialect: 'postgres',
+    operatorsAliases: Sequelize.Op
   },
   test: {  
     username: 'mymoney',  
@@ -15,6 +17,7 @@ module.exports = {
     host: '127.0.0.1',  
     dialect: 'postgres',  
     logging: false,
+    operatorsAliases: Sequelize.Op
   },
   production: {
     username: 'root',
