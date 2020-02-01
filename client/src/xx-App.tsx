@@ -26,8 +26,16 @@ const App: React.FC<Props> = ({ name }) => {
       <Button variant="contained" color="primary">
         Material Button
       </Button>
+
+      <Button variant="contained">Default</Button>
+      
+      
+      <Button variant="contained" color="primary" href="./teste.tsx">
+        Link
+      </Button>
+      
     </StylesProvider>
   );
 };
 
-export default App;
+export default App; 

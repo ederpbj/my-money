@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "build": "webpack --env prod"
+    "start": "webpack-dev-server",
+    "build": "webpack --env prod",
+    "client": "cd client && npm start",
+    "server": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
@@ -17,7 +20,8 @@
     "@types/styled-components": "^4.1.22",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "express": "^4.16.2"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
@@ -26,9 +30,12 @@
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.7.2",
     "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "typescript": "^3.7.2",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.9.0"
-  }
+    "webpack-dev-server": "^3.9.0",
+    "concurrently": "^3.5.0"
+  },
+  "proxy": "http://localhost:5000/"
 }
