@@ -56,7 +56,7 @@
     "apollo-server-express": "^2.9.5",
     "dotenv": "^8.1.0",
     "ejs": "^2.7.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.16.2",
     "forest-express-sequelize": "^4.0.0",
     "graphql": "^14.5.8",
